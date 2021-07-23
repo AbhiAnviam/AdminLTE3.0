@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ .profiler-result{
+     display: none;
+ }
+.sessions_container{
+    height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.inform_text{
+    font-size: 12px;
+    font-weight: bold;
+    color: blue;
+}
+.login_container{
+    padding-top: 225px;
+}
+.edit_container{
+    padding-top: 160px;
+}
+div#error_explanation {
+    color: red;
+}
+.card_style:hover{
+    background: #2a3f54;
+    transition: .3s;
+    transform: scale(1.1);
+    color: #fff;
+}
+.card_style{
+    width: 20rem;
+    border-bottom: 2px solid red !important;
+    height: 450px;
+}
