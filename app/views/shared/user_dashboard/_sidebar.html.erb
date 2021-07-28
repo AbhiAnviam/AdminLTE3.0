@@ -8,14 +8,14 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
-   <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
         <img src="/assets/anviam.png" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Anviam</a>
+        <a href="#" class="d-block">User</a>
       </div>
-    </div> -->
+    </div>
 
     <!-- SidebarSearch Form -->
     <div class="form-inline">
@@ -35,23 +35,18 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         <li class="nav-item menu-open">
-          <a href="<%= home_index_path %>" class="nav-link <%= 'active' if params[:action] == 'index' %>">
+          <a href="<%= user_dashboard_index_path %>" class="nav-link <%= 'active' if params[:action] == 'index' %>">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
-              Home
+              Dashboard
+             <!-- <i class="right fas fa-angle-left"></i> -->
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<%= subscription_home_index_path %>" class="nav-link <%= 'active' if params[:action] == 'subscription' %>">
-            <i class="nav-icon fas fa-bell"></i>
-            <p>Subscription List</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="<%= our_services_home_index_path %>" class="nav-link <%= 'active' if params[:action] == 'our_services' %>">
-          <i class="nav-icon fa fa-info-circle" aria-hidden="true"></i>
-            <p>Our Services</p>
+          <a href="<%= subscription_user_dashboard_index_path %>" class="nav-link <%= 'active' if params[:action] == 'subscription' %>">
+            <i class="nav-icon fas fa-history"></i>
+              <p>Your Subscription History</p>
           </a>
         </li>
       </ul>

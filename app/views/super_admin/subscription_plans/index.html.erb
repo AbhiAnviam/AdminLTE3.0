@@ -1,0 +1,42 @@
+<!-- Content Header (Page header) -->
+<div class="container-fluid">
+	<div class="row py-4">
+		<div class="col-12 d-flex justify-content-end">
+			<%= button_to "Add New Plan", new_super_admin_subscription_plan_path, method: :get, class: "btn btn-success p-2 add_user"%>
+		</div> 
+	</div>
+	<div class="container bg-white">
+		<div class="row">
+			<div class="col-12 p-0">
+				<div class="table-responsive">
+					<table class="table user-list">
+						<thead class="bg-secondary">
+							<tr>
+								<th><span>Plan name</span></th>
+								<th><span>Price</span></th>
+								<th class="text-center"><span>Actions</span></th>
+							</tr>
+						</thead>
+						<tbody id="user_list">
+							<% @subscriptions.each do |s| %>
+								<tr>
+									<td>
+										<span class="user_name" style="font-size: 15px;"><%= s.plan_name %> </span>
+									</td>
+									<td><%= s.price %></td>
+									<td class="text-center" style="width: 30%;">
+										<%= link_to "Show",super_admin_subscription_plan_path(s),:id => s.id,:action => 'show', class: "table-link btn btn-success mr-1"%>
+										<%= link_to "Edit",edit_super_admin_subscription_plan_path(s), method: :get, class: "table-link btn btn-primary mr-1"%>
+										<%= link_to "Destroy", super_admin_subscription_plan_path(s) , :id => s.id,:action => 'destroy', class: "btn btn-danger mr-1",
+											method: :delete,
+											data: { confirm: "Are you sure?" } %>
+									</td>
+								</tr>
+							<%end%>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -25,3 +25,4 @@ import "@fortawesome/fontawesome-free/js/all.min"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+

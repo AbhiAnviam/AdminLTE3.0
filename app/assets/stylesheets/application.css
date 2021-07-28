@@ -27,10 +27,10 @@
     color: blue;
 }
 .login_container{
-    padding-top: 225px;
+    padding-top: 160px;
 }
 .edit_container{
-    padding-top: 160px;
+    padding-top: 110px;
 }
 div#error_explanation {
     color: red;
@@ -45,4 +45,11 @@ div#error_explanation {
     width: 20rem;
     border-bottom: 2px solid red !important;
     height: 450px;
+}
+.info_div:hover{
+    /* background: #2a3f54; */
+    transition: .3s;
+    transform: scale(1.1);
+    color: #fff;
+    cursor: pointer;
 }

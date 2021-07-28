@@ -16,7 +16,7 @@
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
       <%= render "layouts/navbar" %>
-      <%= render 'shared/super_admin_dashboard/sidebar' %>
+      <%= render 'shared/user_dashboard/sidebar' %>
       <div class="content-wrapper">
         <div class="container-fluid">
          <div id="successMessage">
@@ -26,8 +26,8 @@
          <% if alert %>
          <p class="alert alert-danger"><%= alert %></p>
          <% end %>
-       </div>
          </div>
+        </div>
         <%= yield %>
       </div>
       <%= render "layouts/footer" %>

@@ -5,24 +5,24 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+      <li class="nav-item">
+        <a href="<%= root_path %>" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+     <!-- <li class="nav-item">
         <a href="#" class="nav-link">Contact</a>
-      </li>
+      </li> -->
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link btn btn-primary' %>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link btn btn-warning'  %>
+          Logged in as <strong><%= current_user.email %></strong>
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link btn btn-primary mr-2' %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link btn btn-warning'  %>
         <% else %>
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link btn btn-success mr-2'%>
-        <%= link_to "Create Account", new_user_registration_path, :class => 'navbar-link btn btn-warning'%>
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link btn btn-success mr-2'%>
+          <%= link_to "Create Account", new_user_registration_path, :class => 'navbar-link btn btn-warning'%>
         <% end %>
       </li>
     <!--  <li class="nav-item">
@@ -33,3 +33,4 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+  
